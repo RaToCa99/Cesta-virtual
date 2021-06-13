@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fondo_azul"
     tools:context=".register.register">
 
     <LinearLayout
@@ -12,126 +14,166 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
-            android:layout_marginTop="28dp"
-            android:src="@android:drawable/ic_menu_report_image" />
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/logo_app" />
 
-        <TextView
-            android:id="@+id/textView7"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
-            android:text=" Nombre y Apellidos" />
+            android:layout_marginTop="16dp"
+            android:hint="Nombre y Apellidos"
+            android:textColorHint="@color/blue_500"
+            app:boxStrokeColor="@color/blue_500"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true">
 
-        <EditText
-            android:id="@+id/editTextTextPersonName3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Correo Electronico" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name_lastname"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Usuario" />
+                android:inputType="textPersonName"
+                android:textColor="@color/blue_700" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Correo Electrónico"
+            android:textColorHint="@color/blue_500"
+            app:boxStrokeColor="@color/blue_500"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:backgroundTint="@color/blue_700"
+            android:textColor="@color/blue_700" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Nombre usuario"
+            android:textColorHint="@color/blue_500"
+            app:boxStrokeColor="@color/blue_500"
+            app:boxStrokeErrorColor="#FF0000"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:errorContentDescription="Ese usuario ya esiste"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Este usuario ya existe"
-                android:textAlignment="textEnd"
-                android:visibility="gone" />
+                android:backgroundTint="@color/blue_700"
+                android:inputType="textPersonName"
+                android:textColor="@color/blue_700" />
 
-        </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/editTextTextPersonName5"
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
-            android:ems="10"
-            android:inputType="textPersonName" />
+            android:layout_marginTop="16dp"
+            android:hint="Contraseña"
+            android:textColorHint="@color/blue_500"
+            app:boxStrokeColor="@color/blue_500"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/blue_500">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue_700"
+                android:inputType="textPassword"
+                android:textColor="@color/blue_700" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Repite contraseña"
+            android:textColorHint="@color/blue_500"
+            app:boxStrokeColor="@color/blue_500"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/blue_500">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password_register2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue_700"
+                android:inputType="textPassword"
+                android:textColor="@color/blue_700" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/tv_caution"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Contraseña" />
-
-        <EditText
-            android:id="@+id/editTextTextPassword2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:ems="10"
-            android:inputType="textPassword" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Repita Contraseña" />
-
-        <EditText
-            android:id="@+id/editTextTextPassword3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:ems="10"
-            android:inputType="textPassword" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="2dp"
             android:text="Rellene todos los campos"
             android:textAlignment="center"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
             android:visibility="gone" />
 
-        <Button
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/boton_registrarse"
-            style="@android:style/Widget.DeviceDefault.Button"
-            android:layout_width="165dp"
-            android:layout_height="40dp"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="8dp"
-            android:text="Registrarse" />
+            android:layout_marginTop="16dp"
+            android:paddingHorizontal="20dp"
+            android:shadowColor="#4E4B4B"
+            android:shadowDy="5"
+            android:shadowRadius="10"
+            android:soundEffectsEnabled="true"
+            android:text="Registrarse"
+            android:textColor="@color/yellow"
+            app:cornerRadius="8dp" />
 
     </LinearLayout>
 </FrameLayout>

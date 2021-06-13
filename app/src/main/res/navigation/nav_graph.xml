@@ -6,15 +6,35 @@
     app:startDestination="@id/login">
     <fragment
         android:id="@+id/login"
-        android:name="com.example.cestavirtual.login.login"
+        android:name="com.example.cestavirtual.login.details.login"
         android:label="login" >
         <action
             android:id="@+id/navigate_login_register"
-            app:destination="@id/register2" />
+            app:destination="@id/register2"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit" />
+        <action
+            android:id="@+id/navigate_login_to_cestas"
+            app:destination="@id/cestas"
+            app:popUpTo="@+id/login"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/register2"
-        android:name="com.example.cestavirtual.register.register"
+        android:name="com.example.cestavirtual.register.details.register"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/cestas"
+        android:name="com.example.cestavirtual.cestas.details.cestas"
+        android:label="fragment_cestas"
+        tools:layout="@layout/fragment_cestas" >
+        <action
+            android:id="@+id/navigate_cestas_to_cesta"
+            app:destination="@id/cesta" />
+    </fragment>
+    <fragment
+        android:id="@+id/cesta"
+        android:name="com.example.cestavirtual.cesta.details.cesta"
+        android:label="cesta" />
 </navigation>

@@ -1,33 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".cestas.cestas">
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabsCestas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tabLayout">
+        android:background="@color/blue_500"
+        app:tabIconTint="@color/yellow"
+        app:tabIndicatorColor="@color/yellow"
+        app:tabTextColor="@color/yellow">
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/mis_Cestas_tab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mis cestas"
             tools:layout_conversion_absoluteHeight="0dp"
-            tools:layout_editor_absoluteY="0dp"
+            tools:layout_conversion_absoluteWidth="0dp"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_conversion_absoluteWidth="0dp" />
+            tools:layout_editor_absoluteY="0dp" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/cestas_compartidas_tab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cestas compartidas"
             tools:layout_conversion_absoluteHeight="0dp"
-            tools:layout_editor_absoluteY="0dp"
+            tools:layout_conversion_absoluteWidth="0dp"
             tools:layout_editor_absoluteX="206dp"
-            tools:layout_conversion_absoluteWidth="0dp" />
+            tools:layout_editor_absoluteY="0dp" />
 
     </com.google.android.material.tabs.TabLayout>
 
-</FrameLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_cestas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "349170771818",
+    "project_id": "cesta-virtual",
+    "storage_bucket": "cesta-virtual.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349170771818:android:46cc45f2218df0c9d6a713",
+        "android_client_info": {
+          "package_name": "com.example.cestavirtual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349170771818-unhpjb6ciuvt08urh60b9152abkoiirl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPHwgM-iBm2KFyrJRkp6DF5sBGuqLGk24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349170771818-unhpjb6ciuvt08urh60b9152abkoiirl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

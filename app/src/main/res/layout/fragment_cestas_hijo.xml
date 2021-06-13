@@ -4,22 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fondo_azul"
-    tools:context=".cesta">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_articulos"
-        android:layout_width="match_parent"
-        android:layout_height="666dp"
-        tools:listitem="@layout/item_articulo"/>
+    android:background="@color/fondo_azul">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_add_article"
+        android:id="@+id/fab_add_cesta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="8dp"
         android:backgroundTint="@color/blue_500"
         android:clickable="true"
-        android:src="@drawable/ic_baseline_add_24" />
+        android:outlineAmbientShadowColor="#535050"
+        android:outlineSpotShadowColor="#3A3737"
+        android:src="@drawable/ic_baseline_add_24"
+        android:tint="@color/yellow"
+        app:rippleColor="@color/yellow" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_cestas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_cesta_propia" />
+
 </FrameLayout>
