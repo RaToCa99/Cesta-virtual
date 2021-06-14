@@ -123,7 +123,6 @@ class login : Fragment() {
                     }else{
                         if (chb_remember.isChecked) {
                             guardarPrecerences(task.result!!.documents[0].id)
-                          //  Toast.makeText(context, "Usuario-> ${et_username.text} Contraseña-> ${et_password.text}", Toast.LENGTH_LONG).show()
                         }
                         val bundle=Bundle()
                         bundle.putString("idUsuario",task.result!!.documents[0].id)

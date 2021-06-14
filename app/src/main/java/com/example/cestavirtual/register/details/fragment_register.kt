@@ -12,9 +12,6 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.fragment_register.*
 
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -28,8 +25,6 @@ class register : Fragment() {
         arguments?.let {
 
         }
-
-
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -48,8 +43,10 @@ class register : Fragment() {
             .addOnSuccessListener {
                 if(it.isEmpty){
                     hacerRegistro()
+                }else{
+                    Toast.makeText(context, "Ese usuario ya existe", Toast.LENGTH_LONG)
+                        .show()
                 }
-
             }
     }
 
